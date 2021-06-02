@@ -17,7 +17,7 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 // Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use('/.netlify/functions/server', router);  // path must route to lambda
+app.use('/.netlify/functions/app', router);  // path must route to lambda
 
 app.get('/', (req, res) => {
   res.send('It works');
