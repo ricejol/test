@@ -1,22 +1,23 @@
 {
-  "name": "recieve",
+  "name": "test",
   "version": "1.0.0",
-  "description": "",
+  "description": "mailer",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-    "build": "netlify-lambda build app.js",
     "test": "test"
   },
-  "author": "glume",
+  "keywords": [
+    "test"
+  ],
+  "author": "rice",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "^4.15.4",
-    "express-handlebars": "^3.0.0",
-    "netlify-lambda": "^2.0.8",
-    "nodemailer": "^4.1.0",
-    "nodemon": "^2.0.7",
-    "serverless-http": "^2.7.0"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "node": "^16.1.0",
+    "nodemailer": "^6.6.1",
+    "nodemon": "^2.0.7"
   }
 }
