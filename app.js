@@ -4,6 +4,7 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 // const serverless = require('serverless-http')
 const nodemailer = require('nodemailer');
+const { truncate } = require('fs');
 const router = express.Router();
 
 const app = express();
@@ -51,6 +52,7 @@ app.post('/send', (req, res) => {
      },
     secure: false, // true for 465, false for other ports
     auth: {
+        
         user: 'bj74871@gmail.com', // generated ethereal user
         pass: 'nicqoreal12345'  // generated ethereal password
     },
